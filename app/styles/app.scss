@@ -1,0 +1,103 @@
+// Import Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+// @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+$active-color: #7a52d4;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: 'Work Sans', sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: #444;
+  position: relative;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+  white-space: nowrap;
+
+  &:before {
+    background: rgba(0, 0, 0, .05);
+    bottom: 0;
+    content: '';
+    height: 8px;
+    left: 0;
+    position: absolute;
+    transition: all .1s ease-in-out;
+    width: 100%;
+  }
+
+  &:hover {
+    border-bottom: solid 2px $active-color;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 30px;
+
+  &:last-of-type { margin-bottom: 0; }
+}
+
+.card {
+  background: #fff;
+  border: solid 1px #efefef;
+  border-radius: 10px;
+  box-shadow: 0 0 96px 0 rgba(darken($active-color, 35%), .1);
+  margin-top: 100px;
+}
+
+.card-header {
+  background-image: linear-gradient(-225deg, #6681EA 0%, #7E43AA 100%);
+  border: 0;
+  min-height: 175px;
+  position: relative;
+
+  h3 {
+    color: #fff;
+    font-size: 200%;
+    font-weight: 300;
+  }
+
+  &:first-child { border-radius: 10px 10px 0 0; };
+
+
+  img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    bottom: -60px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    height: 125px;
+    position: absolute;
+    width: 125px;
+  }
+}
+
+.stats-header {
+  color: #444;
+  font-size: 90%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.stats-subheader {
+  color: $active-color;
+  font-size: 70%;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
