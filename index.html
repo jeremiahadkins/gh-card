@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>👋, I'm Jeremiah Adkins </title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="d-flex justify-content-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-8 col-md-6" id="gh-profile">
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- hanldbars template -->
+    <script type="text/x-handlebars-template" id="gh-profile-info">
+      <div class="card">
+        <div class="card-header pt-2 pb-5 d-flex justify-content-center">
+          <h3 class="mt-5">{{ name }}</h3>
+          <img src="{{ avatar_url }}">
+        </div>
+        <div class="p-5">
+          <h6 class="stats-subheader">github-url:</h6>
+          <p><a href="{{ url }}">{{ login }}</a></p>
+          <h6 class="stats-subheader">email:</h6>
+          <p><a href="mailto:jeremiahadkins@gmail.com" target="_blank">jeremiahadkins@gmail.com</a></p>
+          <h6 class="stats-subheader">company:</h6>
+          <p>{{ company }} - 😕</p>
+          <h6 class="stats-subheader">website:</h6>
+          <p><a href="{{ blog }}" target="_blank">{{ blog }}</a></p>
+        </div>
+      </div>
+    </script>
+    
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
